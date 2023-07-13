@@ -1,0 +1,27 @@
+apiVersion: v1
+entries:
+  kong:
+  - apiVersion: v2
+    appVersion: "3.1"
+    created: "2023-07-13T19:59:04.097354993Z"
+    description: The Cloud-Native Ingress and API-management
+    digest: ea1893eff35fba80a632fa43ebc7589cdf2191f1a34d13e817902c043c0249ea
+    home: https://konghq.com/
+    icon: https://s3.amazonaws.com/downloads.kong/universe/assets/icon-kong-inc-large.png
+    keywords:
+    - wallarm
+    maintainers:
+    - email: support@wallarm.com
+      name: Wallarm Support
+    - email: harry@konghq.com
+      name: hbagdi
+    - email: traines@konghq.com
+      name: rainest
+    name: kong
+    sources:
+    - https://github.com/Kong/charts/tree/main/charts/kong
+    - https://github.com/wallarm/kong-charts/blob/main/charts/kong
+    urls:
+    - https://github.com/cogito-kyle/kong-charts/releases/download/kong-4.6.0/kong-4.6.0.tgz
+    version: 4.6.0
+generated: "2023-07-13T19:59:04.097364793Z"
