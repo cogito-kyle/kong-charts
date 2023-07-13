@@ -20,7 +20,7 @@ spec:
   template:
     metadata:
       labels:
-        {{- include "kong.metaLabels" . | nindent 8 }}
+        {{- include "kong.selectorLabels" . | nindent 8 }}
         app.kubernetes.io/wallarm-component: {{ template "wallarm.tarantoolName" . }}
     spec:
       {{- if .Values.wallarm.imagePullSecrets }}
