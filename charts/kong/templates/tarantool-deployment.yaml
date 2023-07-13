@@ -4,7 +4,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    {{- include "kong.selectorLabels" . | nindent 4 }}
+    {{- include "kong.metaLabels" . | nindent 4 }}
     app.kubernetes.io/wallarm-component: {{ template "wallarm.tarantoolName" . }}
   name: {{ include "kong.fullname" . }}-wallarm-tarantool
   namespace: {{ .Release.Namespace }}
