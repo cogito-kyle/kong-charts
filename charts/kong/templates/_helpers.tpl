@@ -42,7 +42,7 @@ app.kubernetes.io/component: app
 app.kubernetes.io/instance: "{{ .Release.Name }}"
 {{- end -}}
 
-{{- define "tarantools.selectorLabels" -}}
+{{- define "tarantool.selectorLabels" -}}
 app.kubernetes.io/name: {{ template "kong.name" . }}
 app.kubernetes.io/component: tarantool
 app.kubernetes.io/instance: "{{ .Release.Name }}"
