@@ -5,7 +5,7 @@ kind: DaemonSet
 metadata:
   labels:
     {{- include "kong.metaLabels" . | nindent 4 }}
-    app.kubernetes.io/wallarm-component: {{ template "wallarm.tarantoolName" . }}
+    app.kubernetes.io/component: 'tarantool'
   name: {{ include "kong.fullname" . }}-wallarm-tarantool
   namespace: {{ .Release.Namespace }}
   {{- if .Values.wallarm.tarantool.annotations }}
@@ -14,8 +14,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      {{- include "kong.selectorLabels" . | nindent 6 }}
-      app.kubernetes.io/wallarm-component: {{ template "wallarm.tarantoolName" . }}
+      {{- include "tarantool.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
