@@ -20,6 +20,6 @@ spec:
       port: {{ template "wallarm.tarantoolPort" . }}
       protocol: TCP
   selector:
-    {{- include "kong.selectorLabels" . | nindent 4 }}
-    app.kubernetes.io/wallarm-component: {{ template "wallarm.tarantoolName" . }}
+    {{- include "tarantool.selectorLabels" . | nindent 4 }}
 {{- end }}
+

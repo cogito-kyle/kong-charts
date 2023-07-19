@@ -2,7 +2,8 @@
 
 ## Unreleased
 
-* Changed Tarantools selector labels `app.kubernetes.io/component` to `app.kubernetes.io/wallarm-component` as it collides with `kong.metaLabels`
+* Changed Tarantools selector labels `app.kubernetes.io/component` to `tarantool` instead of `app`
+* Created `tarantool.selectorLabels` to avoid label collisions
 
 ## 2.15.3
 

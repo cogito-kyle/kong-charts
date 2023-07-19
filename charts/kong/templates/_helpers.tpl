@@ -42,6 +42,14 @@ app.kubernetes.io/component: app
 app.kubernetes.io/instance: "{{ .Release.Name }}"
 {{- end -}}
 
+{{- define "tarantool.selectorLabels" -}}
+app.kubernetes.io/name: {{ template "kong.name" . }}
+app.kubernetes.io/component: tarantool
+app.kubernetes.io/part-of: tarantool
+app.kubernetes.io/instance: "{{ .Release.Name }}"
+{{- end -}}
+
+
 {{- define "kong.postgresql.fullname" -}}
 {{- $name := default "postgresql" .Values.postgresql.nameOverride -}}
 {{- printf "%s-%s" .Release.Name $name | trunc 63 | trimSuffix "-" -}}

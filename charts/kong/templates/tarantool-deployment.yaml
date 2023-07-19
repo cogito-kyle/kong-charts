@@ -14,14 +14,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      {{- include "kong.selectorLabels" . | nindent 6 }}
-      app.kubernetes.io/wallarm-component: {{ template "wallarm.tarantoolName" . }}
+      {{- include "tarantool.selectorLabels" . | nindent 6 }}
   replicas: {{ .Values.wallarm.tarantool.replicaCount }}
   template:
     metadata:
       labels:
-        {{- include "kong.metaLabels" . | nindent 8 }}
-        app.kubernetes.io/wallarm-component: {{ template "wallarm.tarantoolName" . }}
+        {{- include "tarantool.selectorLabels" . | nindent 8 }}
     spec:
       {{- if .Values.wallarm.imagePullSecrets }}
       imagePullSecrets:
