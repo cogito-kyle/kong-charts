@@ -45,6 +45,7 @@ app.kubernetes.io/instance: "{{ .Release.Name }}"
 {{- define "tarantool.selectorLabels" -}}
 app.kubernetes.io/name: {{ template "kong.name" . }}
 app.kubernetes.io/component: tarantool
+app.kubernetes.io/part-of: tarantool
 app.kubernetes.io/instance: "{{ .Release.Name }}"
 {{- end -}}
 
